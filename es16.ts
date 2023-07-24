@@ -28,7 +28,7 @@ class DetailedCurrency extends Currency{
 
     // Define a private field named `banknotes`.
     // Set the field type so it can be used to store an array of numbers.
-    #banknotes : number[];
+    private _banknotes : number[];
 
 
 
@@ -38,7 +38,7 @@ class DetailedCurrency extends Currency{
         // Fix this call to the parent constructor.
 
         super(name, code, symbol);
-        this.#banknotes= banknotes;
+        this._banknotes= banknotes;
 
         // Store the value of the `banknotes` parameter in the corresponding field.
 
@@ -56,7 +56,7 @@ class DetailedCurrency extends Currency{
 
         // Replace `null` with the value of the `banknotes` field.
 
-        description += this.#banknotes.join(" ");
+        description += this._banknotes.join(" ");
 
         console.log(description);
     }

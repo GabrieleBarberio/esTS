@@ -7,14 +7,16 @@ class Currency {
     // Hint: Look at the type of values being passed when `new Currency()`
     // is called below.
 
-    #name: string;
-    #code:string;
-    #symbol:symbol;
+    private _name: string;
+    private _code:string;
+    private _symbol:string;
 
     // Add types to the constructor parameters.
 
     constructor(name: string, code: string, symbol: string) {
-        this.#name = name;
+        this._name = name;
+        this._code = code;
+        this._symbol = symbol;
 
         // Store the `code` and `symbol` parameter values in
         // their corresponding class fields.
